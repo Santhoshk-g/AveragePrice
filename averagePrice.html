@@ -1,0 +1,75 @@
+<template>
+    <div class="background-class">
+    <lightning-card title="Average Price Report" icon-name="standard:payment_gateway">
+        
+        <lightning-combobox label="Year" value={year} class="slds-p-around_medium" required="true"
+                        options={YearValues} onchange={handleyearChange}>
+                    </lightning-combobox>
+    <div class="scrollable-container">
+        <table class="fixed-column-table">
+            <thead style="background-color: #4194F9;">
+                <tr>
+                  <th style="border-bottom: hidden;background-color: #4194F9;"></th>  
+            <template for:each={months} for:item="mon">
+                <th key={mon} colspan="3" style="text-align: center;background-color: #4194F9; color:White;"><b>{mon}</b></th> 
+            </template>
+            
+                </tr>
+                <tr>
+                    
+                    <th style="background-color: #4194F9;text-align: start;border-top: hidden; color:White;" ><b>SalesArea</b></th>
+                    <template for:each={months} for:item="mon">
+                        <th style="background-color: #A0CAFC;" key={mon} >Appropriated Qty</th>
+                        <th style="background-color: #A0CAFC;" key={mon}>Value</th>
+                        <th style="background-color: #A0CAFC;" key={mon}>Avg Price</th>
+                    </template>
+                </tr>
+            </thead>
+            <tbody>
+                <template for:each={data} for:item="item">
+                    <tr key={item.sal}>
+                        <th style="color:White;">{item.sal}</th>
+                        <th>{item.janAppro}</th>
+<th>{item.jansale}</th>
+<th style="background-color:#D9EAFE;">{item.janavgpri}</th>
+<th>{item.febAppro}</th>
+<th>{item.febsale}</th>
+<th style="background-color:#D9EAFE;">{item.febavgpri}</th>
+<th>{item.marAppro}</th>
+<th>{item.marsale}</th>
+<th style="background-color:#D9EAFE;">{item.maravgpri}</th>
+<th>{item.aprAppro}</th>
+<th>{item.aprsale}</th>
+<th style="background-color:#D9EAFE;">{item.apravgpri}</th>
+<th>{item.mayAppro}</th>
+<th>{item.maysale}</th>
+<th style="background-color:#D9EAFE;">{item.mayavgpri}</th>
+<th>{item.junAppro}</th>
+<th>{item.junsale}</th>
+<th style="background-color:#D9EAFE;">{item.junavgpri}</th>
+<th>{item.julAppro}</th>
+<th>{item.julsale}</th>
+<th style="background-color:#D9EAFE;">{item.julavgpri}</th>
+<th>{item.augAppro}</th>
+<th>{item.augsale}</th>
+<th style="background-color:#D9EAFE;">{item.augavgpri}</th>
+<th>{item.sepAppro}</th>
+<th>{item.sepsale}</th>
+<th style="background-color:#D9EAFE;">{item.sepavgpri}</th>
+<th>{item.octAppro}</th>
+<th>{item.octsale}</th>
+<th style="background-color:#D9EAFE;">{item.octavgpri}</th>
+<th>{item.novAppro}</th>
+<th>{item.novsale}</th>
+<th style="background-color:#D9EAFE;">{item.novavgpri}</th>
+<th>{item.decAppro}</th>
+<th>{item.decsale}</th>
+<th style="background-color:#D9EAFE;">{item.decavgpri}</th>
+</tr>
+                </template>
+                
+            </tbody>
+        </table>
+    </div></lightning-card>
+    </div>
+</template>

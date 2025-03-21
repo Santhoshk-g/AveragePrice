@@ -1,0 +1,26 @@
+.scrollable-container {
+    overflow-x: auto;
+    max-width: 100%;
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+.fixed-column-table {
+    width: auto;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.fixed-column-table th,
+.fixed-column-table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.fixed-column-table th:first-child,
+.fixed-column-table td:first-child {
+    position: sticky;
+    left: 0;
+    background-color: #4194F9;
+    z-index: 1;
+}
